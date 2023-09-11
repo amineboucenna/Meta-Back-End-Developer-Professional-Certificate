@@ -1,0 +1,19 @@
+- Title: The Prophet
+
+- Author: Kahlil Gibran
+
+- Price: 4.35
+
+
+- Title: Siddhartha
+
+- Author: Hermann Hesse
+
+- Price: 8.95
+
+
+- Title: The Great Gatsby
+
+- Author: Francis Scott Fitzgerald
+
+- Price: 6.90

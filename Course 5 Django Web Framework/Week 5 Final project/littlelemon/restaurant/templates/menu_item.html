@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <article>
+        <h1>Menu item</h1>
+        <span>
+            <a href="{% url 'home' %}">Home</a> /
+            <a href="{% url 'menu' %}">Menu</a>/
+            {{ menu_item.name }} <!-- Step 9: Add a name attribute present inside the menu_item object -->
+        </span>
+        <!--Begin row-->
+        <div class="row">
+            <!--Begin col-->
+            <div class="column">
+                <h2>
+                    {{ menu_item.name }} <!-- Step 9: Add a name attribute present inside the menu_item object -->
+                </h2>
+                <p>
+                    {{ menu_item.menu_item_description }} <!-- Step 9: Add a menu_item_description attribute present inside the menu_item object -->
+                </p>
+                <p>
+                    Price: ${{ menu_item.price }}.00 <!-- Step 9: Add price attribute present inside the menu_item object -->
+                </p>
+            </div>
+            <!--End col-->
+            <!--Begin col-->
+            <div class="column">
+                <img src="{% static 'img/menu_items/'|add:menu_item.name|add:'.jpg' %}" alt="{{ menu_item.name }}" />
+                <!-- Step 9: Replace the comment inside the <img> tag with the code above -->
+            </div>
+            <!--End col-->
+        </div>
+        <!--End row-->
+    </article>
+</section>
+{% endblock %}
